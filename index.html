@@ -170,7 +170,8 @@
       margin-bottom: 8px;
     }
 
-    .tarjeta-para-quien.si p {
+    .tarjeta-para-quien.si p,
+    .tarjeta-para-quien.si li {
       color: #14532d;
       font-size: 0.98rem;
     }
@@ -186,9 +187,18 @@
       margin-bottom: 8px;
     }
 
-    .tarjeta-para-quien.no p {
+    .tarjeta-para-quien.no p,
+    .tarjeta-para-quien.no li {
       color: #881337;
       font-size: 0.98rem;
+    }
+
+    .tarjeta-para-quien ul {
+      margin: 0;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
 
     /* ==========================================================================
@@ -453,9 +463,9 @@
       
       <!-- 1. QUIÉN SOY Y QUÉ OFREZCO -->
       <section class="presentacion" id="presentacion">
-        <h1>Soy Claudia: automatizo tus turnos para que dejes de vivir pegado al WhatsApp.</h1>
-        <p class="destacado">Te armo un sistema simple que atiende a tus clientes, agenda turnos solo y te libera horas de mensajes repetitivos todos los días.</p>
-        <p>Vos te dedicás a atender tu profesión o negocio; del ida y vuelta de horarios se encarga la tecnología.</p>
+        <h1>Soy Claudia: te armo un sistema que agenda turnos y envía recordatorios automáticos por WhatsApp para que dejes de perder horas coordinando citas a mano.</h1>
+        <p class="destacado">Te saco de encima el desgaste diario de contestar siempre las mismas dudas y lidiar con cancelaciones o pacientes que se olvidan a última hora.</p>
+        <p>Vos te dedicás a atender tu profesión o negocio; de la agenda y los avisos se encarga la tecnología.</p>
       </section>
 
       <!-- 2. PARA QUIÉN SÍ / PARA QUIÉN NO -->
@@ -465,12 +475,20 @@
           
           <div class="tarjeta-para-quien si">
             <h3>✓ Es para vos si:</h3>
-            <p>Atendés por turnos, perdés media tarde coordinando citas a mano y te da bronca que te claven el visto o te dejen plantado a último momento.</p>
+            <ul>
+              <li>Atendés con turnos o citas programadas (profesionales independientes, consultorios o comercios).</li>
+              <li>Perdés horas al día respondiendo los mismos mensajes y coordinando horarios a mano por WhatsApp.</li>
+              <li>Te da bronca sufrir huecos en la agenda y perder plata cuando un cliente o paciente te cancela a último momento.</li>
+            </ul>
           </div>
 
           <div class="tarjeta-para-quien no">
             <h3>✕ No es para vos si:</h3>
-            <p>Preferís seguir anotando todo en un cuaderno de papel o no tenés ganas de delegarle tareas repetitivas a un sistema automático.</p>
+            <ul>
+              <li>Preferís seguir anotando tus citas y horarios a mano en un cuaderno de papel.</li>
+              <li>No tenés ganas de delegarle tareas repetitivas a un sistema automático.</li>
+              <li>No contás con 20 minutos para definir tus horarios de atención y validar una prueba inicial.</li>
+            </ul>
           </div>
 
         </div>
