@@ -7,63 +7,69 @@
   
   <style>
     /* ==========================================================================
-       SISTEMA DE DISEÑO: INFORMÁTICA TECH + DETALLES DORADOS + WHATSAPP
+       SISTEMA DE DISEÑO: INFORMÁTICA TECH EN MOVIMIENTO + DORADO & NEGRO + WHATSAPP
        ========================================================================== */
     :root {
-      /* Base informática / Tech */
-      --tech-navy-fondo: #0a0f1d;
-      --tech-navy-dark: #0f172a;
-      --tech-blue: #2563eb;
-      --tech-blue-hover: #1d4ed8;
-      --tech-blue-subtle: #eff6ff;
-      --tech-cyan: #0ea5e9;
-      --tech-cyan-glow: rgba(14, 165, 233, 0.15);
+      /* Fondo no blanco: Navy Slate Profundo Tech */
+      --tech-navy-fondo: #060b17;
+      --tech-navy-tarjeta: #0b1325;
+      --tech-navy-tarjeta-hover: #0f1a33;
+      --tech-navy-superficie: #101c36;
+      --tech-navy-borde: #1a2744;
+      --tech-navy-borde-destacado: #24365d;
       
-      /* Acentos Dorados / Gold */
-      --dorado-principal: #d97706;
-      --dorado-brillante: #f59e0b;
+      /* Acentos de Informática / Cyber */
+      --tech-blue: #3b82f6;
+      --tech-blue-hover: #2563eb;
+      --tech-cyan: #38bdf8;
+      --tech-cyan-glow: rgba(56, 189, 248, 0.25);
+      
+      /* Acentos Dorados / Gold Metálico */
+      --dorado-principal: #f59e0b;
+      --dorado-brillante: #ffd700;
       --dorado-suave: #fbbf24;
-      --dorado-fondo: #fffbeb;
-      --dorado-borde: #fde68a;
-      --dorado-degrade: linear-gradient(135deg, #d97706 0%, #f59e0b 50%, #fbbf24 100%);
-      --dorado-glow: rgba(245, 158, 11, 0.2);
+      --dorado-oscuro: #b45309;
+      --dorado-fondo: rgba(245, 158, 11, 0.12);
+      --dorado-borde: rgba(245, 158, 11, 0.45);
+      --dorado-degrade: linear-gradient(135deg, #FFF6A9 0%, #FFD700 40%, #F59E0B 75%, #B45309 100%);
+      --dorado-glow: rgba(245, 158, 11, 0.35);
       
       /* WhatsApp */
       --wa-verde: #25d366;
-      --wa-verde-hover: #20ba5a;
+      --wa-verde-hover: #22c55e;
       --wa-verde-oscuro: #075e54;
       --wa-teal: #128c7e;
       --wa-fondo-chat: #efeae2;
       --wa-burbuja-in: #ffffff;
       --wa-burbuja-out: #d9fdd3;
       
-      /* Superficies y Textos */
-      --bg-cuerpo: #f8fafc;
-      --bg-tarjeta: #ffffff;
-      --texto-titulos: #0f172a;
-      --texto-cuerpo: #334155;
-      --texto-secundario: #64748b;
+      /* Superficies y Textos sobre fondo oscuro */
+      --bg-cuerpo: #060b17;
+      --bg-tarjeta: #0b1325;
+      --texto-titulos: #ffffff;
+      --texto-cuerpo: #cbd5e1;
+      --texto-secundario: #94a3b8;
       
-      --borde-tarjeta: #e2e8f0;
-      --borde-destacado: #cbd5e1;
+      --borde-tarjeta: #1a2744;
+      --borde-destacado: #283a60;
       
-      --exito-bg: #f0fdf4;
-      --exito-borde: #bbf7d0;
-      --exito-texto: #166534;
+      --exito-bg: rgba(37, 211, 102, 0.12);
+      --exito-borde: rgba(37, 211, 102, 0.4);
+      --exito-texto: #4ade80;
       
-      --alerta-bg: #fff1f2;
-      --alerta-borde: #fecdd3;
-      --alerta-texto: #9f1239;
+      --alerta-bg: rgba(244, 63, 94, 0.12);
+      --alerta-borde: rgba(244, 63, 94, 0.4);
+      --alerta-texto: #fb7185;
       
       --radio-sm: 8px;
       --radio-md: 14px;
       --radio-lg: 20px;
       --radio-pill: 9999px;
       
-      --sombra-tarjeta: 0 4px 16px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
-      --sombra-hover: 0 12px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
-      --sombra-wa: 0 8px 24px -2px rgba(37, 211, 102, 0.35);
-      --sombra-dorada: 0 6px 20px -2px rgba(217, 119, 6, 0.25);
+      --sombra-tarjeta: 0 10px 30px -5px rgba(0, 0, 0, 0.5), 0 0 1px 1px rgba(255, 255, 255, 0.05);
+      --sombra-hover: 0 16px 40px -5px rgba(0, 0, 0, 0.65), 0 0 20px rgba(245, 158, 11, 0.15);
+      --sombra-wa: 0 8px 25px rgba(37, 211, 102, 0.4);
+      --sombra-dorada: 0 6px 24px rgba(245, 158, 11, 0.35);
       
       --fuente-principal: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     }
@@ -83,12 +89,6 @@
     body {
       font-family: var(--fuente-principal);
       background-color: var(--bg-cuerpo);
-      /* Patrón sutil estilo informática / circuitos limpios */
-      background-image: 
-        radial-gradient(rgba(37, 99, 235, 0.05) 1px, transparent 1px),
-        radial-gradient(rgba(245, 158, 11, 0.04) 1px, transparent 1px);
-      background-size: 32px 32px;
-      background-position: 0 0, 16px 16px;
       color: var(--texto-cuerpo);
       line-height: 1.65;
       padding: 0;
@@ -96,6 +96,93 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
+      position: relative;
+    }
+
+    /* ==========================================================================
+       DETALLE DE INFORMÁTICA CON MOVILIDAD (FONDO TECH ANIMADO)
+       ========================================================================== */
+    .fondo-tech-animado {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    /* Malla de circuitos en movimiento constante */
+    .malla-circuitos {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(rgba(56, 189, 248, 0.12) 1.5px, transparent 1.5px),
+        linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+      background-size: 40px 40px, 40px 40px, 40px 40px;
+      animation: moverMallaTech 35s linear infinite;
+    }
+
+    @keyframes moverMallaTech {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(40px, 40px);
+      }
+    }
+
+    /* Luces orbitales tech suaves y móviles */
+    .luz-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      pointer-events: none;
+      opacity: 0.35;
+    }
+
+    .luz-azul {
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, #2563eb 0%, rgba(14, 165, 233, 0.4) 50%, transparent 70%);
+      top: -100px;
+      left: 10%;
+      animation: flotarLuzAzul 20s ease-in-out infinite alternate;
+    }
+
+    .luz-dorada {
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, #d97706 0%, rgba(245, 158, 11, 0.35) 50%, transparent 70%);
+      bottom: 5%;
+      right: 5%;
+      animation: flotarLuzDorada 24s ease-in-out infinite alternate;
+    }
+
+    @keyframes flotarLuzAzul {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+      50% {
+        transform: translate(80px, 60px) scale(1.15);
+      }
+      100% {
+        transform: translate(-40px, 90px) scale(0.9);
+      }
+    }
+
+    @keyframes flotarLuzDorada {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+      50% {
+        transform: translate(-70px, -50px) scale(1.18);
+      }
+      100% {
+        transform: translate(40px, -80px) scale(0.92);
+      }
     }
 
     /* ==========================================================================
@@ -105,10 +192,12 @@
       max-width: 1060px;
       margin: 0 auto;
       padding: 0 32px 80px 32px;
+      position: relative;
+      z-index: 1;
     }
 
     /* ==========================================================================
-       ENCABEZADO / HEADER (ÉNFASIS EN "SOLUCIONES DIGITALES")
+       ENCABEZADO / HEADER: "SOLUCIONES DIGITALES" EN DORADO Y NEGRO
        ========================================================================== */
     .cabecera-principal {
       padding: 36px 0 28px 0;
@@ -117,28 +206,72 @@
       align-items: center;
       justify-content: space-between;
       border-bottom: 2px solid transparent;
-      border-image: linear-gradient(90deg, #2563eb, #f59e0b, #25d366, transparent) 1;
+      border-image: linear-gradient(90deg, #f59e0b, #38bdf8, #25d366, transparent) 1;
       flex-wrap: wrap;
       gap: 18px;
     }
 
-    .marca-bloque {
-      display: flex;
+    /* Bloque Soluciones Digitales: TODO DE DORADO Y NEGRO */
+    .marca-bloque-dorado-negro {
+      background: #000000;
+      border: 2px solid #f59e0b;
+      border-radius: var(--radio-md);
+      padding: 12px 24px;
+      display: inline-flex;
       align-items: center;
       gap: 16px;
+      box-shadow: 0 0 24px rgba(245, 158, 11, 0.35), inset 0 0 14px rgba(245, 158, 11, 0.12);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
     }
 
-    .marca-icono-box {
+    .marca-bloque-dorado-negro:hover {
+      box-shadow: 0 0 32px rgba(245, 158, 11, 0.5), inset 0 0 20px rgba(245, 158, 11, 0.2);
+      border-color: #ffd700;
+    }
+
+    /* Efecto scanner móvil sobre el bloque de Soluciones Digitales */
+    .marca-bloque-dorado-negro::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.22), transparent);
+      animation: barridoDorado 6s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes barridoDorado {
+      0% { left: -100%; }
+      35%, 100% { left: 200%; }
+    }
+
+    .marca-icono-dorado-negro {
       width: 52px;
       height: 52px;
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      border: 1.5px solid var(--dorado-suave);
+      background: #000000;
+      border: 2px solid #f59e0b;
       border-radius: var(--radio-md);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
       flex-shrink: 0;
+      animation: pulsoIconoDorado 3.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulsoIconoDorado {
+      0% {
+        box-shadow: 0 0 8px rgba(245, 158, 11, 0.3);
+        transform: scale(1);
+      }
+      100% {
+        box-shadow: 0 0 18px rgba(245, 158, 11, 0.6);
+        transform: scale(1.04);
+      }
     }
 
     .icono-wa-delicado {
@@ -152,46 +285,38 @@
       gap: 2px;
     }
 
-    .marca-nombre-principal {
-      font-size: 1.85rem;
-      font-weight: 850;
-      letter-spacing: -0.03em;
-      color: var(--texto-titulos);
+    .marca-nombre-principal-dorado-negro {
+      font-size: 1.95rem;
+      font-weight: 900;
+      letter-spacing: -0.025em;
       line-height: 1.15;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .marca-nombre-principal span.detalle-dorado {
-      background: var(--dorado-degrade);
+      background: linear-gradient(135deg, #FFF6A9 0%, #FFD700 35%, #F59E0B 70%, #B45309 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 18px rgba(245, 158, 11, 0.45);
     }
 
-    .marca-subtitulo {
-      font-size: 0.92rem;
-      color: var(--tech-blue);
+    .marca-subtitulo-dorado-negro {
+      font-size: 0.88rem;
+      color: #fbbf24;
       font-weight: 650;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      text-shadow: 0 0 8px rgba(245, 158, 11, 0.3);
     }
 
     .badge-status {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(135deg, #ffffff 0%, var(--dorado-fondo) 100%);
-      border: 1px solid var(--dorado-borde);
+      background: #000000;
+      border: 1.5px solid rgba(245, 158, 11, 0.5);
       padding: 8px 16px;
       border-radius: var(--radio-pill);
-      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.12);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 10px rgba(245, 158, 11, 0.2);
       font-size: 0.84rem;
       font-weight: 700;
-      color: var(--texto-titulos);
+      color: #f8fafc;
     }
 
     .punto-online {
@@ -199,7 +324,19 @@
       height: 9px;
       background-color: var(--wa-verde);
       border-radius: 50%;
-      box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.25);
+      animation: pulsoOnline 2s infinite;
+    }
+
+    @keyframes pulsoOnline {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 8px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
     }
 
     /* ==========================================================================
@@ -214,10 +351,11 @@
       box-shadow: var(--sombra-tarjeta);
       transition: all 0.25s ease;
       position: relative;
+      backdrop-filter: blur(12px);
     }
 
     section:hover {
-      border-color: var(--borde-destacado);
+      border-color: rgba(245, 158, 11, 0.4);
       box-shadow: var(--sombra-hover);
     }
 
@@ -231,6 +369,7 @@
     h1 {
       font-size: 2.15rem;
       font-weight: 850;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     }
 
     h2 {
@@ -248,6 +387,7 @@
       height: 22px;
       background: var(--dorado-degrade);
       border-radius: var(--radio-pill);
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
     }
 
     p {
@@ -265,9 +405,9 @@
        1. PRESENTACIÓN / HERO
        ========================================================================== */
     .presentacion {
-      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 60%, var(--dorado-fondo) 100%);
-      border-top: 4px solid var(--tech-blue);
-      border-left: 3px solid var(--dorado-brillante);
+      background: linear-gradient(135deg, #0b1325 0%, #101c36 70%, #171b2e 100%);
+      border-top: 4px solid var(--tech-cyan);
+      border-left: 4px solid var(--dorado-principal);
       position: relative;
       overflow: hidden;
     }
@@ -280,7 +420,7 @@
       right: -20px;
       width: 180px;
       height: 180px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2325d366' stroke-width='1' opacity='0.08'%3E%3Cpath d='M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2325d366' stroke-width='1' opacity='0.12'%3E%3Cpath d='M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z'/%3E%3C/svg%3E");
       background-size: contain;
       background-repeat: no-repeat;
       pointer-events: none;
@@ -288,15 +428,15 @@
 
     .presentacion .destacado {
       font-size: 1.15rem;
-      color: var(--texto-titulos);
+      color: #f8fafc;
       font-weight: 550;
-      background: #ffffff;
-      border: 1px solid var(--borde-tarjeta);
+      background: #0f1c38;
+      border: 1px solid #1e335e;
       border-left: 4px solid var(--dorado-brillante);
       padding: 16px 22px;
       border-radius: var(--radio-sm);
       margin: 20px 0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
     }
 
     /* ==========================================================================
@@ -321,7 +461,7 @@
       display: flex;
       flex-direction: column;
       gap: 14px;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
     .tarjeta-para-quien:hover {
@@ -329,13 +469,13 @@
     }
 
     .tarjeta-para-quien.si {
-      background: linear-gradient(180deg, var(--exito-bg) 0%, #ffffff 100%);
-      border: 1.5px solid var(--exito-borde);
+      background: linear-gradient(180deg, rgba(37, 211, 102, 0.09) 0%, #0a1722 100%);
+      border: 1.5px solid rgba(37, 211, 102, 0.35);
       border-top: 3px solid var(--wa-verde);
     }
 
     .tarjeta-para-quien.si h3 {
-      color: var(--exito-texto);
+      color: #4ade80;
       font-size: 1.12rem;
       font-weight: 750;
       display: flex;
@@ -345,19 +485,19 @@
 
     .tarjeta-para-quien.si p,
     .tarjeta-para-quien.si li {
-      color: #14532d;
+      color: #bbf7d0;
       font-size: 0.98rem;
       line-height: 1.6;
     }
 
     .tarjeta-para-quien.no {
-      background: linear-gradient(180deg, var(--alerta-bg) 0%, #ffffff 100%);
-      border: 1.5px solid var(--alerta-borde);
+      background: linear-gradient(180deg, rgba(244, 63, 94, 0.09) 0%, #1a0e1b 100%);
+      border: 1.5px solid rgba(244, 63, 94, 0.35);
       border-top: 3px solid #f43f5e;
     }
 
     .tarjeta-para-quien.no h3 {
-      color: var(--alerta-texto);
+      color: #fb7185;
       font-size: 1.12rem;
       font-weight: 750;
       display: flex;
@@ -367,7 +507,7 @@
 
     .tarjeta-para-quien.no p,
     .tarjeta-para-quien.no li {
-      color: #881337;
+      color: #fecdd3;
       font-size: 0.98rem;
       line-height: 1.6;
     }
@@ -384,7 +524,7 @@
        3. DEMO INTERACTIVA (ANTES Y DESPUÉS)
        ========================================================================== */
     .caja-antes {
-      background-color: var(--alerta-bg);
+      background-color: rgba(244, 63, 94, 0.12);
       border-left: 4px solid #f43f5e;
       border-radius: var(--radio-sm);
       padding: 16px 20px;
@@ -395,8 +535,8 @@
       display: inline-block;
       font-size: 0.74rem;
       font-weight: 800;
-      color: #9f1239;
-      background-color: #ffe4e6;
+      color: #ffffff;
+      background-color: #be123c;
       padding: 3px 10px;
       border-radius: 4px;
       margin-bottom: 6px;
@@ -405,14 +545,14 @@
     }
 
     .caja-antes p {
-      color: #881337;
+      color: #fecdd3;
       font-size: 1rem;
       margin: 0;
       font-weight: 500;
     }
 
     .caja-despues {
-      background-color: var(--exito-bg);
+      background-color: rgba(37, 211, 102, 0.12);
       border-left: 4px solid var(--wa-verde);
       border-radius: var(--radio-sm);
       padding: 16px 20px;
@@ -423,8 +563,8 @@
       display: inline-block;
       font-size: 0.74rem;
       font-weight: 800;
-      color: var(--exito-texto);
-      background-color: #dcfce7;
+      color: #ffffff;
+      background-color: #15803d;
       padding: 3px 10px;
       border-radius: 4px;
       margin-bottom: 6px;
@@ -433,7 +573,7 @@
     }
 
     .caja-despues p {
-      color: #14532d;
+      color: #bbf7d0;
       font-size: 1rem;
       margin: 0;
       font-weight: 500;
@@ -441,19 +581,19 @@
 
     /* Tarjeta del Simulador */
     .simulador-card {
-      background-color: #ffffff;
-      border: 1px solid var(--borde-tarjeta);
+      background-color: #0b1325;
+      border: 1px solid #1a2744;
       border-top: 3px solid var(--dorado-brillante);
       border-radius: var(--radio-md);
       overflow: hidden;
-      box-shadow: var(--sombra-tarjeta);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
       max-width: 860px;
       margin: 0 auto;
     }
 
     .simulador-header {
-      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-      border-bottom: 1px solid var(--borde-tarjeta);
+      background: linear-gradient(135deg, #0f1c38 0%, #142347 100%);
+      border-bottom: 1px solid #1a2744;
       padding: 16px 22px;
       display: flex;
       justify-content: space-between;
@@ -463,13 +603,13 @@
     }
 
     .badge-demo {
-      background-color: #eff6ff;
-      color: var(--tech-blue);
+      background-color: rgba(37, 99, 235, 0.2);
+      color: #60a5fa;
       font-size: 0.8rem;
       font-weight: 750;
       padding: 5px 12px;
       border-radius: var(--radio-pill);
-      border: 1px solid #bfdbfe;
+      border: 1px solid rgba(37, 99, 235, 0.45);
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -481,12 +621,13 @@
       height: 7px;
       background-color: var(--dorado-brillante);
       border-radius: 50%;
+      box-shadow: 0 0 6px rgba(255, 215, 0, 0.7);
     }
 
     .simulador-rubro {
       font-size: 0.88rem;
       font-weight: 650;
-      color: var(--texto-secundario);
+      color: #94a3b8;
     }
 
     .simulador-body {
@@ -501,7 +642,7 @@
       display: block;
       font-size: 0.94rem;
       font-weight: 750;
-      color: var(--texto-titulos);
+      color: #f1f5f9;
       margin-bottom: 10px;
     }
 
@@ -512,9 +653,9 @@
     }
 
     .chip-btn {
-      background-color: #f8fafc;
-      border: 1.5px solid var(--borde-tarjeta);
-      color: var(--texto-titulos);
+      background-color: #0e1830;
+      border: 1.5px solid #1e2e4f;
+      color: #e2e8f0;
       font-size: 0.9rem;
       font-weight: 550;
       padding: 10px 16px;
@@ -527,15 +668,16 @@
 
     .chip-btn:hover {
       border-color: var(--dorado-brillante);
-      background-color: var(--dorado-fondo);
+      background-color: rgba(245, 158, 11, 0.12);
+      color: #ffd700;
     }
 
     .chip-btn.activo {
-      border-color: var(--tech-blue);
-      background-color: var(--tech-blue-subtle);
-      color: var(--tech-blue);
+      border-color: #38bdf8;
+      background-color: rgba(14, 165, 233, 0.2);
+      color: #38bdf8;
       font-weight: 750;
-      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+      box-shadow: 0 0 14px rgba(14, 165, 233, 0.35);
     }
 
     .inputs-grid {
@@ -554,29 +696,29 @@
       width: 100%;
       padding: 13px 16px;
       font-size: 0.96rem;
-      border: 1.5px solid var(--borde-tarjeta);
+      border: 1.5px solid #1e2e4f;
       border-radius: var(--radio-sm);
       font-family: inherit;
-      color: var(--texto-titulos);
-      background-color: #ffffff;
+      color: #ffffff;
+      background-color: #0e1830;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
     .campo-texto:focus {
       outline: none;
-      border-color: var(--tech-blue);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.25);
     }
 
     .btn-agendar-demo {
       width: 100%;
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      color: #ffffff;
-      border: 1.5px solid var(--dorado-suave);
+      background: linear-gradient(135deg, #000000 0%, #151515 100%);
+      color: #ffd700;
+      border: 2px solid #f59e0b;
       border-radius: var(--radio-sm);
       padding: 16px;
       font-size: 1.04rem;
-      font-weight: 750;
+      font-weight: 800;
       cursor: pointer;
       transition: all 0.2s ease;
       margin-top: 12px;
@@ -585,14 +727,15 @@
       justify-content: center;
       gap: 10px;
       font-family: inherit;
-      box-shadow: var(--sombra-dorada);
+      box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
       touch-action: manipulation;
     }
 
     .btn-agendar-demo:hover {
-      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      background: linear-gradient(135deg, #18181b 0%, #27272a 100%);
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(245, 158, 11, 0.35);
+      box-shadow: 0 8px 24px rgba(245, 158, 11, 0.5);
+      border-color: #ffd700;
     }
 
     .btn-agendar-demo:active {
@@ -604,9 +747,9 @@
       background-color: var(--wa-fondo-chat);
       border-radius: var(--radio-md);
       overflow: hidden;
-      border: 1px solid #d1d7db;
+      border: 1px solid #2a3942;
       margin-top: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
       animation: aparecerSuave 0.25s ease-out;
     }
 
@@ -690,14 +833,14 @@
     }
 
     .simulador-exito-box {
-      background: linear-gradient(135deg, var(--exito-bg) 0%, var(--dorado-fondo) 100%);
-      border-top: 1px solid var(--exito-borde);
+      background: linear-gradient(135deg, rgba(37, 211, 102, 0.12) 0%, rgba(245, 158, 11, 0.1) 100%);
+      border-top: 1px solid rgba(37, 211, 102, 0.35);
       padding: 18px 20px;
       text-align: center;
     }
 
     .simulador-exito-box p {
-      color: var(--exito-texto);
+      color: #86efac;
       font-size: 0.96rem;
       font-weight: 650;
       margin: 0 0 12px 0;
@@ -706,7 +849,7 @@
     .btn-reiniciar-demo {
       background-color: transparent;
       border: 1.5px solid var(--wa-verde);
-      color: #15803d;
+      color: #4ade80;
       padding: 8px 18px;
       border-radius: var(--radio-sm);
       font-size: 0.9rem;
@@ -729,23 +872,24 @@
 
     .boton-demo-cta {
       display: inline-block;
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      color: #ffffff;
+      background: linear-gradient(135deg, #000000 0%, #151515 100%);
+      color: #ffd700;
       text-decoration: none;
-      font-weight: 750;
+      font-weight: 800;
       font-size: 1.04rem;
       padding: 16px 28px;
       border-radius: var(--radio-sm);
-      border: 1px solid var(--dorado-brillante);
+      border: 2px solid #f59e0b;
       transition: all 0.2s ease;
-      box-shadow: var(--sombra-dorada);
+      box-shadow: 0 4px 18px rgba(245, 158, 11, 0.35);
       line-height: 1.4;
     }
 
     .boton-demo-cta:hover {
-      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      background: linear-gradient(135deg, #18181b 0%, #27272a 100%);
       transform: translateY(-2px);
-      box-shadow: 0 10px 28px rgba(245, 158, 11, 0.35);
+      box-shadow: 0 10px 28px rgba(245, 158, 11, 0.55);
+      border-color: #ffd700;
     }
 
     /* ==========================================================================
@@ -771,24 +915,24 @@
       gap: 18px;
       align-items: flex-start;
       padding: 22px;
-      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
-      border: 1px solid var(--borde-tarjeta);
+      background: linear-gradient(180deg, #0e1830 0%, #121e3c 100%);
+      border: 1px solid #1a2744;
       border-radius: var(--radio-md);
       transition: all 0.25s ease;
     }
 
     .paso-item:hover {
-      border-color: var(--dorado-suave);
-      box-shadow: var(--sombra-hover);
+      border-color: #f59e0b;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 15px rgba(245, 158, 11, 0.15);
       transform: translateY(-2px);
     }
 
     .paso-numero {
       width: 40px;
       height: 40px;
-      background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%);
-      color: var(--dorado-suave);
-      border: 1.5px solid var(--dorado-brillante);
+      background: #000000;
+      color: #ffd700;
+      border: 2px solid #f59e0b;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -796,37 +940,37 @@
       font-weight: 850;
       font-size: 1rem;
       flex-shrink: 0;
-      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
     }
 
     .paso-contenido h3 {
       font-size: 1.08rem;
       font-weight: 750;
       margin-bottom: 6px;
-      color: var(--texto-titulos);
+      color: #ffffff;
     }
 
     .paso-contenido p {
       font-size: 0.98rem;
       margin-bottom: 0;
-      color: var(--texto-cuerpo);
+      color: #cbd5e1;
     }
 
     /* ==========================================================================
        5. CÓMO ARMO UN PRESUPUESTO (DESTACADO DORADO & TECH)
        ========================================================================== */
     .caja-presupuesto {
-      background: linear-gradient(135deg, #fffbeb 0%, #ffffff 100%);
-      border: 1.5px solid var(--dorado-borde);
-      border-left: 5px solid var(--dorado-brillante);
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, #12192a 100%);
+      border: 1.5px solid rgba(245, 158, 11, 0.4);
+      border-left: 5px solid #f59e0b;
       border-radius: var(--radio-md);
       padding: 24px;
       margin: 24px 0;
-      box-shadow: var(--sombra-dorada);
+      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.18);
     }
 
     .caja-presupuesto p {
-      color: #78350f;
+      color: #fde68a;
       font-size: 1.06rem;
       margin-bottom: 10px;
       line-height: 1.6;
@@ -847,24 +991,24 @@
     }
 
     details {
-      border: 1px solid var(--borde-tarjeta);
+      border: 1px solid #1a2744;
       border-radius: var(--radio-md);
-      background-color: #ffffff;
+      background-color: #0e1830;
       transition: all 0.2s ease;
       overflow: hidden;
     }
 
     details[open] {
-      border-color: var(--dorado-suave);
-      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.1);
-      background-color: #fcfdfe;
+      border-color: #f59e0b;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4), 0 0 14px rgba(245, 158, 11, 0.18);
+      background-color: #121f3d;
     }
 
     summary {
       padding: 18px 22px;
       font-weight: 700;
       font-size: 1.04rem;
-      color: var(--texto-titulos);
+      color: #f8fafc;
       cursor: pointer;
       list-style: none;
       display: flex;
@@ -875,7 +1019,7 @@
     }
 
     summary:hover {
-      background-color: var(--dorado-fondo);
+      background-color: rgba(245, 158, 11, 0.08);
     }
 
     summary::-webkit-details-marker {
@@ -895,12 +1039,12 @@
 
     details[open] summary::after {
       content: "−";
-      color: var(--tech-blue);
+      color: var(--tech-cyan);
     }
 
     details .respuesta {
       padding: 0 22px 22px 22px;
-      color: var(--texto-cuerpo);
+      color: #cbd5e1;
       font-size: 1rem;
       line-height: 1.68;
     }
@@ -910,9 +1054,9 @@
        ========================================================================== */
     .seccion-cta {
       text-align: center;
-      background: linear-gradient(135deg, #ffffff 0%, #eff6ff 60%, var(--dorado-fondo) 100%);
-      border: 2px solid var(--dorado-borde);
-      box-shadow: var(--sombra-flotante);
+      background: linear-gradient(135deg, #0b1426 0%, #101d3a 50%, #18192e 100%);
+      border: 2px solid rgba(245, 158, 11, 0.5);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(245, 158, 11, 0.15);
       padding: 52px 36px;
       position: relative;
     }
@@ -921,10 +1065,15 @@
       font-size: 1.95rem;
       margin-bottom: 14px;
       justify-content: center;
+      color: #ffffff;
     }
 
     .seccion-cta h2::before {
       display: none;
+    }
+
+    .seccion-cta p {
+      color: #e2e8f0;
     }
 
     /* Botón WhatsApp de Alta Conversión */
@@ -941,7 +1090,7 @@
       font-size: 1.15rem;
       padding: 18px 38px;
       border-radius: var(--radio-pill);
-      border: 2px solid #bbf7d0;
+      border: 2px solid #86efac;
       cursor: pointer;
       box-shadow: var(--sombra-wa);
       transition: all 0.25s ease;
@@ -963,7 +1112,7 @@
     .boton-reunion:hover {
       background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
       transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.45);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.55);
     }
 
     .boton-reunion:active {
@@ -998,12 +1147,18 @@
         gap: 14px;
       }
 
-      .marca-nombre-principal {
+      .marca-bloque-dorado-negro {
+        width: 100%;
+        padding: 10px 16px;
+        gap: 12px;
+      }
+
+      .marca-nombre-principal-dorado-negro {
         font-size: 1.55rem;
       }
 
-      .marca-subtitulo {
-        font-size: 0.82rem;
+      .marca-subtitulo-dorado-negro {
+        font-size: 0.78rem;
       }
 
       section {
@@ -1064,22 +1219,29 @@
 </head>
 <body>
 
+  <!-- ELEMENTOS DE INFORMÁTICA CON MOVILIDAD (FONDO TECH ANIMADO) -->
+  <div class="fondo-tech-animado" aria-hidden="true">
+    <div class="luz-orb luz-azul"></div>
+    <div class="luz-orb luz-dorada"></div>
+    <div class="malla-circuitos"></div>
+  </div>
+
   <div class="contenedor">
     
-    <!-- ENCABEZADO CON ÉNFASIS EN "SOLUCIONES DIGITALES" -->
+    <!-- ENCABEZADO CON ÉNFASIS EN "SOLUCIONES DIGITALES" EN DORADO Y NEGRO -->
     <header class="cabecera-principal">
-      <div class="marca-bloque">
-        <div class="marca-icono-box">
-          <!-- Dibujo delicado de WhatsApp combinado con tecnología informática y acento dorado -->
+      <div class="marca-bloque-dorado-negro">
+        <div class="marca-icono-dorado-negro">
+          <!-- Dibujo delicado de WhatsApp combinado con tecnología informática en dorado y negro -->
           <svg class="icono-wa-delicado" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="#25D366" stroke-width="2"/>
-            <circle cx="12" cy="11.5" r="3" stroke="#f59e0b" stroke-width="2"/>
-            <path d="M12 7.5v1M12 14.5v1M8 11.5h1M15 11.5h1" stroke="#38bdf8" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="#f59e0b" stroke-width="2"/>
+            <circle cx="12" cy="11.5" r="3" stroke="#ffd700" stroke-width="2"/>
+            <path d="M12 7.5v1M12 14.5v1M8 11.5h1M15 11.5h1" stroke="#f59e0b" stroke-width="1.6" stroke-linecap="round"/>
           </svg>
         </div>
         <div class="marca-textos">
-          <div class="marca-nombre-principal">Soluciones <span class="detalle-dorado">Digitales</span></div>
-          <div class="marca-subtitulo">Automatización de Turnos & Canales de Atención</div>
+          <div class="marca-nombre-principal-dorado-negro">Soluciones Digitales</div>
+          <div class="marca-subtitulo-dorado-negro">Automatización de Turnos & Canales de Atención</div>
         </div>
       </div>
       <div class="badge-status">
@@ -1430,7 +1592,7 @@
 
     <!-- PIE DE PÁGINA -->
     <footer>
-      <p>© Claudia — Soluciones Digitales. Todos los derechos reservados.</p>
+      <p>© Claudia — <span class="dorado-pie">Soluciones Digitales</span>. Todos los derechos reservados.</p>
     </footer>
 
   </div>
